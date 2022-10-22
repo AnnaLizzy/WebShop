@@ -18,5 +18,6 @@ namespace WebApp.Data.Entities
 
         public Guid UserId { get; set; }
         
+        public AppUser AppUser { set; get; }
     }
 }
