@@ -11,7 +11,7 @@ namespace WebApp.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<AppRole> builder)
         {
-            builder.ToTable("AppRole");
+            builder.ToTable("AppRoles");
 
             builder.Property(x => x.Description).HasMaxLength(200).IsRequired();
 
