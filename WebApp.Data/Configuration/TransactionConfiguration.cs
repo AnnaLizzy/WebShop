@@ -14,7 +14,8 @@ namespace WebApp.Data.Configuration
             builder.ToTable("Transactions");
             builder.HasKey(t => t.Id);
             builder.Property(t => t.Id).UseIdentityColumn();
-            
+            builder.HasOne(x => x.AppUser).WithMany(x => x.Transactions)
+                .HasForeignKey(x => x.UserId);
         }
     }
 }
